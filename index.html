@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Meraki Christmas Game</title>
+<link rel="icon" type="image/png" href="meraki logo.png">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Splash Screen -->
+<div id="splash-screen">
+  <img src="meraki logo.png" alt="Meraki Logo" id="splash-logo">
+</div>
+
+<!-- Welcome Screen -->
+<div id="welcome-screen" class="centered-screen" style="display:none;">
+  <h2>🎄 Welcome to Meraki Christmas Game! 🎄</h2>
+  <p>Catch Christmas items to win a coupon!</p>
+  <button id="start-btn">Start</button>
+</div>
+
+<!-- User Form -->
+<div id="user-form" class="centered-screen" style="display:none;">
+  <h2>Enter Your Details</h2>
+  <form id="playerForm">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="tel" id="mobile" placeholder="Mobile Number" required>
+    <input type="email" id="email" placeholder="Email Address" required>
+    <button type="submit">Start Game</button>
+  </form>
+</div>
+
+<!-- Game Container -->
+<div id="game-container" class="centered-screen" style="display:none;">
+  <button id="back-button">⬅ Back</button>
+
+  <div id="scoreboard">
+    <span id="score-display">Score: 0</span> |
+    <span id="target-display">Target: 1000 | Time: 30s</span>
+  </div>
+
+  <p id="instructions">Move your basket to catch falling items!</p>
+
+  <div id="game-area">
+    <div id="snow-container"></div>
+    <div id="bucket"></div>
+  </div>
+
+  <p id="win-message"></p>
+</div>
+
+
+<!-- WIN PAGE -->
+<div id="win-screen" style="display:none;">
+    <h1 class="win-title">🎉 YOU WIN! 🎉</h1>
+    <p class="coupon-text">Your Coupon Code:</p>
+    <p class="coupon-box">mkchristmas10</p>
+
+    <h3>Follow Us</h3>
+
+    <div class="social-icons">
+        <a href="https://merakistore.myeasyorders.com/" target="_blank">
+            <img src="www.png" alt="Website">
+        </a>
+
+        <a href="https://www.instagram.com/merakicandles.eg?igsh=dmc3eHd6cWdoMWYy" target="_blank">
+            <img src="instagram (5).png" alt="Instagram">
+        </a>
+
+        <a href="https://www.facebook.com/share/14LDBNYE2KH/?mibextid=wwXIfr" target="_blank">
+            <img src="facebook (3).png" alt="Facebook">
+        </a>
+
+        <a href="https://www.tiktok.com/@meraki.candles.store?_t=ZS-90lj3tZHJFV&_r=1" target="_blank">
+            <img src="tik-tok (3).png" alt="TikTok">
+        </a>
+    </div>
+
+    <button id="win-back-btn">⬅ Back</button>
+</div>
+
+<!-- LOSE PAGE -->
+<div id="lose-screen" style="display:none;">
+    <h1 class="lose-title">😢 Try Hard Next Time!</h1>
+    <p class="lose-sub">You didn’t reach the target score.</p>
+
+    <img src="11521519.png" class="lose-emoji" alt="Sad 3D">
+
+    <h3>Follow Us</h3>
+
+    <div class="social-icons">
+        <a href="https://merakistore.myeasyorders.com/" target="_blank">
+            <img src="www.png" alt="Website">
+        </a>
+
+        <a href="https://www.instagram.com/merakicandles.eg?igsh=dmc3eHd6cWdoMWYy" target="_blank">
+            <img src="instagram (5).png" alt="Instagram">
+        </a>
+
+        <a href="https://www.facebook.com/share/14LDBNYE2KH/?mibextid=wwXIfr" target="_blank">
+            <img src="facebook (3).png" alt="Facebook">
+        </a>
+
+        <a href="https://www.tiktok.com/@meraki.candles.store?_t=ZS-90lj3tZHJFV&_r=1" target="_blank">
+            <img src="tik-tok (3).png" alt="TikTok">
+        </a>
+    </div>
+
+    <button id="lose-back-btn">⬅ Back</button>
+</div>
+
+
+
+<!-- Background Music -->
+<audio id="bg-music" loop src="Happy Christmas Background Music For Videos.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
